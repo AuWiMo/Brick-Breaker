@@ -11,14 +11,23 @@ var dead = 0;
 
 function setup() {
   createCanvas(800, 800);
+  reset();
+}
+
+function reset() {
   textAlign(CENTER);
   frameRate(60);
-  ball.speedSquared = 32
   dead = 0;
   player.x = mouseX;
   player.y = height * 0.9;
-  ball.x = 400;
-  ball.y = 500;
+  ball = {
+    x: 500,
+    y: 500,
+    xVel: 4,
+    yVel: 4,
+    radius: 20,
+    speedSquared: 32
+  };
   rectMode(CENTER);
   bricksGen(9);
   score = 0;
@@ -49,7 +58,7 @@ function draw() {
 function keyPressed() {
   if (keyCode == 32) {
     if (dead == 1) {
-      setup();
+      reset();
     }
   }
 }

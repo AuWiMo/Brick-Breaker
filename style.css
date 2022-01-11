@@ -1,6 +1,6 @@
 html, body {
-  margin: 1;
-  padding: 1;
+  margin: 100;
+  padding: 100;
 }
 canvas {
   display: block;
