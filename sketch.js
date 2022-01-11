@@ -29,6 +29,7 @@ function reset() {
     speedSquared: 32
   };
   rectMode(CENTER);
+  wall = []
   bricksGen(9);
   score = 0;
   ball.xVel = 4
