@@ -17,6 +17,8 @@ function setup() {
   dead = 0;
   player.x = mouseX;
   player.y = height * 0.9;
+  ball.x = 400;
+  ball.y = 500;
   rectMode(CENTER);
   bricksGen(9);
   score = 0;
