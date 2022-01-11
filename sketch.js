@@ -6,7 +6,7 @@ var player = {
 };
 
 let score = 0;
-
+let colorVar = "red"
 var dead = 0;
 
 function setup() {
@@ -66,6 +66,7 @@ function keyPressed() {
 
 function gameOver() {
   dead = 1;
+  colorVar = "green"
   fill("yellow");
   textSize(height / 33);
   text("GAME OVER", width / 2, height / 2);
