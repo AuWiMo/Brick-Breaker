@@ -1,0 +1,5 @@
+Day 1 - 1/9/2022: Begin. Ball now bounces off of the walls, ceiling. It bounces off the player sometimes
+
+Day 2 - 1/10/2020: All features now present
+                   Issues: brick collision glitch, space bar glitch, 
+                   the player changes speed randomly, not in a controlled way
