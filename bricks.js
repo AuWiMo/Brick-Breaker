@@ -19,11 +19,6 @@ function bricksGen(rows) {
 }
 
 function showWall() {
-  //if(firstTry) {
-  //  fill("blue")
-  //} else {
-  //  fill("green")
-  //}
   for (let i = 0; i < wall.length; i++) {
     rect(wall[i].x, wall[i].y, brickLength, brickThickness)
   }
