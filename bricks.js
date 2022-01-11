@@ -10,11 +10,6 @@ function Brick(xpos, ypos) {
 } 
 
 function bricksGen(rows) {
-  if(firstTry) {
-    fill("blue")
-  } else {
-    fill("green")
-  }
   for (let i = 0; i < rows; i++) {
       for(let j = 0; j < 10; j++) {
         let b = new Brick(45 + j * 79, 150 + brickThickness/2 + i * (brickThickness * 50/45))
@@ -24,7 +19,11 @@ function bricksGen(rows) {
 }
 
 function showWall() {
-  fill(140, 0, 0)
+  if(firstTry) {
+    fill("blue")
+  } else {
+    fill("green")
+  }
   for (let i = 0; i < wall.length; i++) {
     rect(wall[i].x, wall[i].y, brickLength, brickThickness)
   }
