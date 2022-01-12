@@ -7,7 +7,8 @@ var player = {
 
 let score = 0;
 let firstTry = true;
-var dead = 0;
+let ballOnPaddle = true;
+let dead = 0;
 
 function setup() {
   canvas = createCanvas(700, 700);
@@ -35,10 +36,10 @@ function reset() {
   score = 0;
   ball.xVel = 4
   player.yVel = 4
+  ballOnPaddle = true
 }
 
 function draw() {
-  if (dead == 0) {
     rectMode(CENTER);
     background(0);
     fill("red");
@@ -53,9 +54,11 @@ function draw() {
     fill("yellow");
     circle(ball.x, ball.y, ball.radius);
     textSize(24);
-    text("Score: " + score, width * 0.08, height * 0.98);
-    
-  }
+    text("Score: " + score, width * 0.08, height * 0.98); 
+}
+
+function mousePressed() {
+  ballOnPaddle = false;
 }
 
 function keyPressed() {
