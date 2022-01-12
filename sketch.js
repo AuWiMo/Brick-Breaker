@@ -10,7 +10,8 @@ let firstTry = true;
 var dead = 0;
 
 function setup() {
-  createCanvas(800, 800);
+  canvas = createCanvas(700, 700);
+  canvas.position(300, 0);
   reset();
 }
 
