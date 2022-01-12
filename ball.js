@@ -47,7 +47,7 @@ function ballUpdate() {
     ball.y += ball.yVel;
   } else {
     ball.x = player.x;
-    ball.y = player.y + ball.radius/2 + player.thickness/20 
+    ball.y = player.y - ball.radius/2 - player.thickness/2 
   }
 
   if (ball.y > height) {
