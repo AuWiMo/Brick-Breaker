@@ -42,8 +42,13 @@ function ballUpdate() {
   }
   
   //move ball
-  ball.x += ball.xVel;
-  ball.y += ball.yVel;
+  if (!ballOnPaddle) {
+    ball.x += ball.xVel;
+    ball.y += ball.yVel;
+  } else {
+    ball.x = player.x;
+    ball.y = player.y + ball.radius/2 + player.thickness/20 
+  }
 
   if (ball.y > height) {
     gameOver();
