@@ -11,7 +11,7 @@ var dead = 0;
 
 function setup() {
   canvas = createCanvas(700, 700);
-  canvas.position(300, 0);
+  canvas.position(300, 50);
   reset();
 }
 
@@ -41,6 +41,7 @@ function draw() {
   if (dead == 0) {
     rectMode(CENTER);
     background(0);
+    fill("red");
     showWall();
     player.x = mouseX;
     player.x = constrain(mouseX, player.length / 2, width - player.length / 2);
@@ -95,7 +96,7 @@ function collisionCheck() {
       }
       wall.splice(i, 1);
       score++
-      ball.speedSquared = 32 + score
+      ball.speedSquared = 32 + score * 0.9
       break;
     }
   }
