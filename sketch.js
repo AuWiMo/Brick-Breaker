@@ -25,8 +25,8 @@ function reset() {
   ball = {
     x: 500,
     y: 500,
-    xVel: 4,
-    yVel: 4,
+    xVel: 0,
+    yVel: 0,
     radius: 20,
     speedSquared: 32
   };
@@ -34,8 +34,6 @@ function reset() {
   wall = []
   bricksGen(9);
   score = 0;
-  ball.xVel = 4
-  player.yVel = 4
   ballOnPaddle = true
 }
 
@@ -58,7 +56,11 @@ function draw() {
 }
 
 function mousePressed() {
-  ballOnPaddle = false;
+  if (ballOnPaddle) {
+    ballOnPaddle = false;
+    ball.xVel = 0
+    ball.yVel = -6;
+  }
 }
 
 function keyPressed() {
@@ -74,9 +76,9 @@ function gameOver() {
   firstTry = false;
   fill("yellow");
   textSize(height / 33);
-  text("GAME OVER", width / 2, height / 2);
+  text("GAME OVER", width / 2, height / 1.4);
   textSize(height / 50);
-  text("PRESS SPACE TO PLAY AGAIN", width / 2, height / 1.87);
+  text("PRESS SPACE TO PLAY AGAIN", width / 2, height / 1.27);
 }
 
 function collisionCheck() {
