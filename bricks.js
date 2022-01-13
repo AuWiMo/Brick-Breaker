@@ -33,7 +33,7 @@ function bricksGen(rows) {
         iColor = "fuchsia"
       }
       for(let j = 0; j < 9; j++) {
-        let b = new Brick(35 + j * 79, 75 + brickThickness/2 + i * (brickThickness * 50/45), iColor)
+        let b = new Brick(35 + j * 79, 100 + brickThickness/2 + i * (brickThickness * 50/45), iColor)
         wall.push(b);
       }
    }
