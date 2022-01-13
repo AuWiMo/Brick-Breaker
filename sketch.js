@@ -29,7 +29,7 @@ function reset() {
     xVel: 0,
     yVel: 0,
     radius: 12,
-    speedSquared: 16
+    speedSquared: 4
   };
   rectMode(CENTER);
   wall = []
