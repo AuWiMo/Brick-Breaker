@@ -13,7 +13,7 @@ let highScore = 0;
 
 function setup() {
   canvas = createCanvas(700, 700);
-  canvas.position(300, 25);
+  canvas.position(450, 25);
   reset();
 }
 
