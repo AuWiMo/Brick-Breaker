@@ -1,6 +1,6 @@
 
 let brickLength = 75;
-let brickThickness = 25;
+let brickThickness = 12;
 let wall = [];
 
 
@@ -12,7 +12,7 @@ function Brick(xpos, ypos) {
 function bricksGen(rows) {
   for (let i = 0; i < rows; i++) {
       for(let j = 0; j < 10; j++) {
-        let b = new Brick(45 + j * 79, 150 + brickThickness/2 + i * (brickThickness * 50/45))
+        let b = new Brick(45 + j * 79, 75 + brickThickness/2 + i * (brickThickness * 50/45))
         wall.push(b);
       }
    }
