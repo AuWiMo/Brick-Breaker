@@ -32,8 +32,8 @@ function bricksGen(rows) {
       } else if (i == 9) {
         iColor = "fuchsia"
       }
-      for(let j = 0; j < 10; j++) {
-        let b = new Brick(15 + j * 79, 75 + brickThickness/2 + i * (brickThickness * 50/45), iColor)
+      for(let j = 0; j < 9; j++) {
+        let b = new Brick(30 + j * 79, 75 + brickThickness/2 + i * (brickThickness * 50/45), iColor)
         wall.push(b);
       }
    }
