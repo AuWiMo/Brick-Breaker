@@ -28,7 +28,7 @@ function reset() {
     y: 500,
     xVel: 0,
     yVel: 0,
-    radius: 20,
+    radius: 12,
     speedSquared: 16
   };
   rectMode(CENTER);
@@ -106,7 +106,7 @@ function collisionCheck() {
       }
       wall.splice(i, 1);
       score++
-      ball.speedSquared = 16 + score * 0.9
+      ball.speedSquared = 16 + score * 0.5
       break;
     }
   }
