@@ -1,18 +1,19 @@
 var player = {
   x: 0,
   y: 0,
-  length: 100,
-  thickness: 20,
+  length: 75,
+  thickness: 12,
 };
 
 let score = 0;
 let firstTry = true;
 let ballOnPaddle = true;
 let dead = 0;
+let highScore = 0;
 
 function setup() {
   canvas = createCanvas(700, 700);
-  canvas.position(300, 50);
+  canvas.position(300, 25);
   reset();
 }
 
@@ -51,8 +52,12 @@ function draw() {
     rect(player.x, player.y, player.length, player.thickness);
     fill("yellow");
     circle(ball.x, ball.y, ball.radius);
-    textSize(24);
+    textSize(20);
     text("Score: " + score, width * 0.08, height * 0.98); 
+    if (score > highScore) {
+      highScore = score
+      text("Highcore: " + highScore, width * 0.8, height * 0.98); 
+    }
 }
 
 function mousePressed() {
@@ -76,9 +81,9 @@ function gameOver() {
   firstTry = false;
   fill("yellow");
   textSize(height / 33);
-  text("GAME OVER", width / 2, height / 1.3);
+  text("GAME OVER", width / 2, height / 2);
   textSize(height / 50);
-  text("PRESS SPACE TO PLAY AGAIN", width / 2, height / 1.25);
+  text("PRESS SPACE TO PLAY AGAIN", width / 2, height / 1.87);
 }
 
 function collisionCheck() {
