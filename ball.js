@@ -3,7 +3,7 @@ let ball = {
   y: 500,
   xVel: 4,
   yVel: 4,
-  radius: 20,
+  radius: 12,
   speedSquared: 32
 };
 
