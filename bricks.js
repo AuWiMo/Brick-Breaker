@@ -1,5 +1,5 @@
 
-let brickLength = 75;
+let brickLength = 70;
 let brickThickness = 18;
 let wall = [];
 
