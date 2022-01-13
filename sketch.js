@@ -76,9 +76,9 @@ function gameOver() {
   firstTry = false;
   fill("yellow");
   textSize(height / 33);
-  text("GAME OVER", width / 2, height / 1.2);
+  text("GAME OVER", width / 2, height / 1.3);
   textSize(height / 50);
-  text("PRESS SPACE TO PLAY AGAIN", width / 2, height / 1.1);
+  text("PRESS SPACE TO PLAY AGAIN", width / 2, height / 1.25);
 }
 
 function collisionCheck() {
