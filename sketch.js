@@ -57,7 +57,7 @@ function draw() {
     if (score > highScore) {
       highScore = score
     }
-    text("Highcore: " + highScore, width * 0.8, height * 0.98); 
+    text("Highcore: " + highScore, width * 0.9, height * 0.98); 
 }
 
 function mousePressed() {
