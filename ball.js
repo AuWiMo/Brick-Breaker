@@ -32,7 +32,7 @@ function ballUpdate() {
     ball.x >= player.x - player.length / 2
   ) {
     ball.yVel = -sqrt(random(ball.speedSquared/4, ball.speedSquared))
-    if (ball.xVel > 0) {
+    if (ball.xVel >= 0) {
       ball.xVel = sqrt(abs(ball.speedSquared - sq(ball.yVel)))
     }
     if (ball.xVel < 0) {
