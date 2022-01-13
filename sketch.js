@@ -18,7 +18,7 @@ function setup() {
 
 function reset() {
   textAlign(CENTER);
-  frameRate(60);
+  frameRate(120);
   dead = 0;
   player.x = mouseX;
   player.y = height * 0.9;
@@ -28,7 +28,7 @@ function reset() {
     xVel: 0,
     yVel: 0,
     radius: 20,
-    speedSquared: 32
+    speedSquared: 16
   };
   rectMode(CENTER);
   wall = []
@@ -59,7 +59,7 @@ function mousePressed() {
   if (ballOnPaddle) {
     ballOnPaddle = false;
     ball.xVel = 0
-    ball.yVel = -6;
+    ball.yVel = -3;
   }
 }
 
@@ -101,7 +101,7 @@ function collisionCheck() {
       }
       wall.splice(i, 1);
       score++
-      ball.speedSquared = 32 + score * 0.9
+      ball.speedSquared = 16 + score * 0.9
       break;
     }
   }
