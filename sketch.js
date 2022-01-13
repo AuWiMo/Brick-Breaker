@@ -64,7 +64,7 @@ function mousePressed() {
   if (ballOnPaddle) {
     ballOnPaddle = false;
     ball.xVel = 0
-    ball.yVel = -3;
+    ball.yVel = -2;
   }
 }
 
@@ -106,7 +106,7 @@ function collisionCheck() {
       }
       wall.splice(i, 1);
       score++
-      ball.speedSquared = 16 + score * 0.5
+      ball.speedSquared = constrain(4 + score * 0.5, 4, 64)
       break;
     }
   }
