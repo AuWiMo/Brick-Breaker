@@ -1,5 +1,5 @@
 
-let brickLength = 75;
+let brickLength = 74;
 let brickThickness = 18;
 let wall = [];
 
@@ -33,7 +33,7 @@ function bricksGen(rows) {
         iColor = "fuchsia"
       }
       for(let j = 0; j < 9; j++) {
-        let b = new Brick(30 + j * 79, 75 + brickThickness/2 + i * (brickThickness * 50/45), iColor)
+        let b = new Brick(35 + j * 79, 75 + brickThickness/2 + i * (brickThickness * 50/45), iColor)
         wall.push(b);
       }
    }
